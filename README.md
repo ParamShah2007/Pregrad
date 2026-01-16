@@ -1,0 +1,3 @@
+# Pregrad
+
+[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/ParamShah2007/Pregrad)

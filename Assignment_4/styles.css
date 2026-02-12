@@ -1,6 +1,7 @@
 :root {
     --primary--color: darkblue;
     --nav-pill-color: lightblue;
+    --text-color: black;
 }
 * {
     margin: 0;
@@ -13,6 +14,7 @@
 .header {
     background-color: var(--primary--color);
     padding: 15px 3rem;
+    /* margin-bottom: 100px; */
 }
 /* logo */
 .logo {
@@ -26,7 +28,7 @@
 .nav-pill {
     font-size: large;
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     border-radius: 15px;
     padding: 5px 10px;
     background-color: var(--nav-pill-color);
@@ -39,20 +41,20 @@
 }
 
 #productsDisplay {
+    /* justify-content: right; */
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
+    flex-wrap: wrap;
 }
-
 .product-card {
     width: 250px;
     border: 2px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 5px 7px rgba(65, 109, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0, 7px 7px rgba(0, 47, 255, 0.3);
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .product-card img {
@@ -61,69 +63,34 @@
     object-fit: cover;
 }
 
-.original-price {
+.orignal-price {
     text-decoration: line-through;
-    color: blue;
-    margin-left: 3px;
+    color: var(--nav-pill-color);
+    margin-left: 6px;
 }
 
 .discount {
-    color: blueviolet;
+    color: blue;
     font-weight: bold;
-    margin-left: 5px;
+    margin-left: 6px;
 }
+
 main {
     margin: 3rem;
 }
 
 .card-cart-button-strip,
-.card-cart-discount-strip {
+.card-rating-discount-strip {
     display: flex;
     justify-content: space-between;
 }
 
-.product-button {
+#cart-button {
     text-decoration: none;
-    color: white;
-    padding: 3px 6px;
-    border-radius: 4px;
-    background-color: var(--nav-pill-color);
-}
-  
-/* Hover effect */
-.product-button:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-#filters {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
-    color: var(--primary--color);
-}
-#gender-selection {
-    border: 1px solid var(--primary--color);
+    color: var(--text-color);
     font-size: large;
-    padding: 4px;
-}
-.page-display{
-    display: flex;
-}
-#filters-section{
-    width:20%;
-    color:var(--primary--color)
-}
-#productsDisplay{
-    width: 80%;
-}
-#rating-input{
-    width: 150px;
-}
-#clear-btn{
-    text-decoration: none;
-    color: white;
-    padding: 0.5rem 0.8rem;
-    border-radius: 4px;
+    /* font-weight: bold; */
+    padding: 3px 6px;
+    border-radius: 10px;
     background-color: var(--nav-pill-color);
-    cursor: pointer;
 }

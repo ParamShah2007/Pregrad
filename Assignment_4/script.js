@@ -13,7 +13,7 @@ const displayProducts = products => {
             <span class="discount">${currentProduct.discountPercentage}% OFF </span>
         </p>
         <p class="price-button-strip">
-            <span class="price">${currentProduct.discountPrice}</span>
+            <span class="price">${currentProduct.discountedPrice}</span>
             <span class="orignal-price">${currentProduct.price}</span>
             <button id="cart-button">Add to Cart </button>
         </p>

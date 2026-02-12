@@ -17,16 +17,28 @@
         </nav>
     </header>
     <main>
-        <section id="filters">
-          <h2>Our Range of Products</h2>
-          <div>
-            <select id="gender-selection">
-              <option value="">-- Gender --</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
+        <section id="page-display">
+          <div id="filters-section">
+            <h2>Filters</h2><br />
+            <h3>Decoration Kits</h3><br />
+            <label><input type="radio" name="kits" id="Happy Birthday">Happy Birthday</label><br/><br/>
+            <label><input type="radio" name="kits" id="Happy Anniversary">Happy Anniversary</label><br/><br/>
+            <label><input type="radio" name="kits" id="Baby Shower">Baby Shower</label><br/><br/>
+            <label><input type="radio" name="kits" id="Welcome">Welcome</label><br/><br/>
+            <label><input type="radio" name="kits" id="I Love You">I Love You</label><br/><br/>
+          
+            <h3>Rating:</h3><br>
+            <input id="rating-input" type="range" step="0.5" min="0" max="5" value="0"><br/><br/>
+
+            <p>Greater than: <span id="rating-input">0</span></p><br>
+            <h3>Categories</h3><br>
+            <label><input type="checkbox" class="category-checkbox" id="withcartian"/> With Cartian </label><br/><br/>
+            <label><input type="checkbox" class="category-checkbox" id="whitehbbanner"/> White HB Banner</label><br/><br/>
+            <label><input type="checkbox" class="category-checkbox" id="blackhbbanner"/> Black HB Banner </label><br/><br/>
+            <label><input type="checkbox" class="category-checkbox" id="bluehbbanner"/> Blue HB Banner </label><br/><br/>
+            <label><input type="checkbox" class="category-checkbox" id="withoutcartian"/> Without Cartian </label><br/><br/>
           </div>
-        <div id="productsDisplay"></div>
+          <div id="productsDisplay"></div>
         </section>
     </main>     
 </body>

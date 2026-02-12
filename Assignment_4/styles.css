@@ -1,0 +1,118 @@
+:root {
+    --primary--color: darkblue;
+    --nav-pill-color: lightblue;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header */
+.header {
+    background-color: var(--primary--color);
+    padding: 15px 3rem;
+}
+/* logo */
+.logo {
+    color: var(--nav-pill-color);
+}
+.nav {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+.nav-pill {
+    font-size: large;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: var(--nav-pill-color);
+}
+.nav-pill:hover {
+    opacity: 0.5;
+}
+.nav-pill.active{
+    background-color: blue;
+}
+
+#productsDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product-card {
+    width: 250px;
+    border: 2px solid #ddd;
+    padding: 18px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 7px rgba(65, 109, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: blue;
+    margin-left: 6px;
+}
+
+.discount {
+    color: blueviolet;
+    font-weight: bold;
+    margin-left: 5px;
+}
+main {
+    margin: 3rem;
+}
+
+.card-cart-button-strip,
+.card-cart-discount-strip {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-button {
+    text-decoration: none;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background-color: var(--nav-pill-color);
+}
+  
+/* Hover effect */
+.product-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+#filters {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    color: var(--primary--color);
+}
+#gender-selection {
+    border: 1px solid var(--primary--color);
+    font-size: large;
+    padding: 4px;
+}
+.page-display{
+    display: flex;
+}
+#filters-section{
+    width:20%;
+    color:var(--primary--color)
+}
+#productsDisplay{
+    width: 80%;
+}

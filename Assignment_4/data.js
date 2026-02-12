@@ -326,6 +326,5 @@ const products = [
       category: 'Casual',
     },
   ];
-//   export const data1=[]
-  export default products;
+export default products;
   

@@ -1,7 +1,8 @@
-import products from "./data";
-// console.log(products)
+import products from "./data.js";
+console.log(products)
+console.log(products);
 const productsDisplay = document.getElementById('productsDisplay');
-const displayProducts = products=>{
+const displayProducts = products => {
     products.forEach((currentProduct) => {
         const card = document.createElement('div');
         card.className = 'product-card';
@@ -17,7 +18,7 @@ const displayProducts = products=>{
             <button id="cart-button">Add to Cart </button>
         </p>
         `;
-    productsDisplay.append(card)
+        productsDisplay.append(card);
     });
-}
-displayProducts(products)
+};
+displayProducts(products);

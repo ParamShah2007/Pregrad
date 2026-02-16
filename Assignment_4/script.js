@@ -1,24 +1,25 @@
 import products from "./data.js";
-console.log(products)
-console.log(products);
+import { data1 } from "./data.js";
+import displayProducts from "./render.js";
+console.log(displayProducts)
 const productsDisplay = document.getElementById('productsDisplay');
-const displayProducts = products => {
-    products.forEach((currentProduct) => {
-        const card = document.createElement('div');
-        card.className = 'product-card';
-        card.innerHTML = `
-        <img src="${currentProduct.imgUrl}" alt="${currentProduct.name}">
-        <h3>${currentProduct.name}</h3>
-        <p class="rating-discount-strip"> ⭐${currentProduct.rating}
-            <span class="discount">${currentProduct.discountPercentage}% OFF </span>
-        </p>
-        <p class="price-button-strip">
-            <span class="price">${currentProduct.discountedPrice}</span>
-            <span class="orignal-price">${currentProduct.price}</span>
-            <button id="cart-button">Add to Cart </button>
-        </p>
-        `;
-        productsDisplay.append(card);
-    });
-};
+const typeRadio = document.querySelectorAll('input[name]');
+const ratingInput = document.getElementById('rating-input');
+const ratingOutput = document.getElementById('rating-output');
 displayProducts(products);
+
+typeRadio.forEach(currentRadio=> {
+    currentRadio.addEventListener('change', e=>{
+        const selectedType=e.target.value
+        const filteredData=products.filter(p => p.types === selectedType)
+        displayProducts(filteredData)
+    })
+})
+
+ratingInput.addEventListener('change', (e)=>{
+    const currentValue=Number(e.target.value);
+    console.log(typeof(currentValue));
+    ratingOutput.innerText=currentValue
+    const filterProducts = products.filter(p=>p.rating>=currentValue)
+    displayProducts(filterProducts)
+})
